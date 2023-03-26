@@ -1,0 +1,22 @@
+audioRef = 'test_sample_ref.wav';
+
+
+keep = ["_1" "_0.6" "_0.4" "_0.3" "_0.2" "_0.1" "_0.05"];
+wavelet = ["_Biorthogonal" "_Coiflet" "_Daubechies" "_Haar" "_R Biortogonal"];
+kbps = ["_32kbps" "_64kbps" "_96kbps" "_128kbps"];
+
+csv = zeros(39,1);
+Nomes = [];
+count = 0;
+
+for wav = 1:length(wavelet)
+   for percent = 1:length(keep)
+       count = count + 1;
+       test = strcat("test_sample",keep(percent),wavelet(wav),format(form));
+       Nomes(count) = keep(percent)+wavelet(wav);
+       csv(count) = PQevalAudio(audioRef,test);
+   end
+end
+
+T=array2table(csv,'VariableNames',Nomes);
+writetable(T,'PEAQ.csv');
