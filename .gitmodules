@@ -1,0 +1,6 @@
+[submodule "SRes_methods"]
+	path = SRes_methods
+	url = https://github.com/victormassatieze/PdG_SRes_methods
+[submodule "MRes_methods"]
+	path = MRes_methods
+	url = https://github.com/victormassatieze/PdG_MRes_methods
