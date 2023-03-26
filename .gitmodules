@@ -4,3 +4,6 @@
 [submodule "MRes_methods"]
 	path = MRes_methods
 	url = https://github.com/victormassatieze/PdG_MRes_methods
+[submodule "Combination_methods"]
+	path = Combination_methods
+	url = https://github.com/victormassatieze/PdG_combination_methods
